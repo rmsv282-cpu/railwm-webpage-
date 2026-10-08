@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>docs · railwm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e6eaed;--ink:#1a232d;--rail:#f2b705;--muted:#4b5966;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171e;--ink:#eef2f5;--muted:#9fb0bd}}
+:root[data-theme="dark"]{--bg:#10171e;--ink:#eef2f5;--muted:#9fb0bd}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.55 Archivo,system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+a{color:var(--ink);text-decoration-thickness:3px;text-decoration-color:var(--rail);text-underline-offset:3px;font-weight:800}
+:focus-visible{outline:3px solid var(--rail);outline-offset:3px}
+h1{font-size:clamp(4rem,18vw,8rem);line-height:.85;margin:1.5rem 0 2rem;font-weight:800;letter-spacing:-.05em}
+h2{margin:3rem 0 1rem;font-size:1.8rem;letter-spacing:-.02em}
+p{margin:0 0 1rem}
+pre{margin:0 0 1rem;padding:1rem 1.2rem;border-radius:12px;background:var(--ink);color:var(--bg);overflow-x:auto;font:400 .95rem/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+code{font:inherit}
+p code{background:rgba(127,127,127,.2);padding:.05rem .35rem;border-radius:5px;font:400 .95em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.reqs{margin:0 0 1rem;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.5rem}
+.reqs li{border:2px solid var(--ink);border-radius:8px;padding:.1rem .6rem;font:400 .95rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+footer{margin-top:4rem;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<main>
+  <a href="index.html">railwm</a>
+  <h1>docs</h1>
+
+  <h2>Requirements</h2>
+  <p>Install these before compiling:</p>
+  <ul class="reqs">
+    <li>libx11-dev</li><li>pkg-config</li><li>meson</li><li>ninja</li><li>libxcursor-dev</li><li>libdbus-1-dev</li><li>libcairo-dev</li><li>xorg</li><li>cmake</li>
+  </ul>
+
+  <h2>Compile</h2>
+<pre><code>meson setup build
+ninja -C build</code></pre>
+
+  <h2>Install</h2>
+  <p>Copy the binaries into <code>/usr/local/bin</code>, or into <code>~/.local/bin</code> if it is on your PATH.</p>
+
+  <h2>Release binary</h2>
+  <p>Unpack the release, then follow the install step above.</p>
+<pre><code>tar -xvf railwm-bin.tar.xz</code></pre>
+
+  <footer>railwm 0.1.0 · <a href="https://github.com/rmsv282-cpu/railwm" rel="noopener">Source</a></footer>
+</main>
+</body>
+</html>
